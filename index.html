@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("#next-to-2nd-page").click(function(){
+            $("#page-1").hide();
+            $("#page-2").show();
+          });
+          $("#next-to-3rd-page").click(function(){
+            $("#page-2").hide();
+            $("#page-3").show();
+          });
+          $("#next-to-4th-page").click(function(){
+            $("#page-3").hide();
+            $("#page-4").show();
+          });
+          $("#next-to-5th-page").click(function(){
+            $("#page-4").hide();
+            $("#page-5").show();
+          });
+          $("#next-to-6th-page").click(function(){
+            $("#page-5").hide();
+            $("#page-6").show();
+          });
+          $("#prev-to-1st-page").click(function(){
+            $("#page-2").hide();
+            $("#page-1").show();
+          });
+          $("#prev-to-2nd-page").click(function(){
+            $("#page-3").hide();
+            $("#page-2").show();
+          });
+          $("#prev-to-3rd-page").click(function(){
+            $("#page-4").hide();
+            $("#page-3").show();
+          });
+          $("#prev-to-4th-page").click(function(){
+            $("#page-5").hide();
+            $("#page-4").show();
+          });
+          $("#prev-to-5th-page").click(function(){
+            $("#page-6").hide();
+            $("#page-5").show();
+          });
+        });
+        </script>
+      
+    <link rel="stylesheet" type="text/css" href="hello1.css">
+</head>
+
+<form id="survey-form">
+    <div id="page-1">
+      <h2>Survey Form</h2>
+      <p>Page 1 of 6</p>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+      <button type="button" id ="next-to-2nd-page" >Next</button>
+    </div>
+    <div id="page-2" style="display: none;">
+      <p>Page 2 of 6</p>
+      <div class="form-group">
+        <label for="gov1"><p>
+            Our company has a technological strategy to redefine customer
+            <span title="(For example: Delivering an integrated customer experience through digital, improving service to customers through digital, and using digital to understand customers better)">experience</span>, redefining <span title="(Improve efficiency in their existing operations like transparent supply chain)">operations</span>, and redefining business models<span title="(Combining ideas around operational processes and customer experience)">models</span>  that can use as a competence. <span title="This is a tooltip">tooltip</span>
+          </p></label>
+        <select id="gov1" name="gov1" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="very satisfied">Very Satisfied</option>
+          <option value="satisfied">Satisfied</option>
+          <option value="neutral">Neutral</option>
+          <option value="unsatisfied">Unsatisfied</option>
+          <option value="very unsatisfied">Very Unsatisfied</option>
+        </select>
+
+        <label for="gov2"><p>
+            In our company, the leaders responsible for digital strategy and innovation have competencies in digitalization, sensors, IoT,  big data, and digital transformation.
+          </p></label>
+        
+            <select id="gov2" name="gov2" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="very satisfied">Very Satisfied</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="neutral">Neutral</option>
+            <option value="unsatisfied">Unsatisfied</option>
+            <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+
+
+          <label for="gov3"><p>
+            Our managers monitor the company’s digital strategy based on various performance <span title="(data entry rate per person, hardware usage rate, digital report rate, data size, efficiency values, number of processes converted, cost reduction, target change, etc.).">indicators</span>
+                  </p></label>
+        
+        <select id="gov3" name="gov3" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="very satisfied">Very Satisfied</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="neutral">Neutral</option>
+            <option value="unsatisfied">Unsatisfied</option>
+            <option value="very unsatisfied">Very Unsatisfied</option>
+        </select>
+
+        <label for="gov4"><p>
+             Investment <span title="for example, increasing hardware budget, creating a new employee budget, machine and equipment upgrade or replacement">plans</span> are revised, or corrective investment budgets are created according to the degree of success of performance
+             <span title="data entry rate per person, hardware usage rate, digital report rate, data size, efficiency values, the number of processes converted, cost reduction, change in targets, etc">indicators</span> determined by our company. 
+                  </p></label>
+        
+        <select id="gov4" name="gov4" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="very satisfied">Very Satisfied</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="neutral">Neutral</option>
+            <option value="unsatisfied">Unsatisfied</option>
+            <option value="very unsatisfied">Very Unsatisfied</option>
+        </select> 
+
+        <!--<label for="gov5"><p>
+            Investment <span title="for example, increasing hardware budget, creating a new employee budget, machine and equipment upgrade or replacement">plans</span> are revised, or corrective investment budgets are created according to the degree of success of performance
+            <span title="data entry rate per person, hardware usage rate, digital report rate, data size, efficiency values, the number of processes converted, cost reduction, change in targets, etc">indicators</span> determined by our company. 
+                 </p></label>
+       
+       <select id="gov5" name="gov5" required>
+           <option value="" disabled selected>Select an option</option>
+           <option value="very satisfied">Very Satisfied</option>
+           <option value="satisfied">Satisfied</option>
+           <option value="neutral">Neutral</option>
+           <option value="unsatisfied">Unsatisfied</option>
+           <option value="very unsatisfied">Very Unsatisfied</option>
+       </select> 
+    -->
+        
+    
+
+      </div>
+      <div class="form-group">
+        <label for="suggestions">Do you have any suggestions for improvement?</label>
+        <textarea id="suggestions" name="suggestions"></textarea>
+      </div>
+      
+      <button type="button" id="prev-to-1st-page">Previous</button>
+      
+      <button type="submit" id ="next-to-3rd-page">Next</button>
+    </div>
+    <div id="page-3" style="display: none;">
+        <p>Page 3 of 6</p>
+        <div class="form-group">
+          <label for="cul1"><p>
+            Our employees have common goals, shared responsibilities, and support using digital connectivity channels (such as the sources in an electronic format accessible through internet-connected computers or other electronic devices like any websites, software, or apps) to increase digital transformation.
+        </p></label>
+          <select id="cul1" name="cul1" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="very satisfied">Very Satisfied</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="neutral">Neutral</option>
+            <option value="unsatisfied">Unsatisfied</option>
+            <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+  
+          <label for="cul2"><p>
+            Our company emphasizes increasing the digital skills (critical thinking, data management, MATLAB, SQL, machine learning, communication, creating and editing online documents, transforming digital technologies, etc.) of the employees by offering related trainings. 
+            </p></label>
+          
+              <select id="cul2" name="cul2" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+            </select>
+  
+  
+            <label for="cul3"><p>
+                Our company has several connections with digital experts to improve talent, skills (critical thinking, data management, MATLAB, SQL, machine learning, communication etc.), and expertise for digital transformation.
+                    </p></label>
+          
+          <select id="cul3" name="cul3" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+  
+          <label for="cul4"><p>
+            Our company shares digital strategies (Companies such as Airbnb, DHL, and Target use redefining customer experience (For example: Delivering an integrated customer experience through digital, improving service to customers through digital, and using digital to understand customers better), redefining operations (Improve efficiency in their existing operations like transparent supply chain), and redefining business models (Combining ideas around operational processes and customer experience)) among internal and external stakeholders, such as suppliers, customers, investors, government agencies, communities, employees, etc.
+                    </p></label>
+          
+          <select id="cul4" name="cul4" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+          
+    <button type="button" id="prev-to-2nd-page">Previous</button>
+      
+    <button type="submit" id ="next-to-4th-page">Next</button>
+
+    </div>
+    </div>
+
+    <div id="page-4" style="display: none;">
+        <p>Page 4 of 6</p>
+        <div class="form-group">
+          <label for="tec1"><p>
+            Our company evaluates different technological innovations (5G networks, 3D printing, augmented reality, wearable tech, smartphones, mobile apps, conversational chatbots, etc.) and has an access data-driven (Artificial Intelligence (AI), Data Science) capabilities to describe, predict and improve business performance.
+        </p></label>
+          <select id="tec1" name="tec1" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="very satisfied">Very Satisfied</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="neutral">Neutral</option>
+            <option value="unsatisfied">Unsatisfied</option>
+            <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+  
+          <label for="tec2"><p>
+            Our company uses technological features (Video technologies, GPS, drones, bitcoin, e-books, cybersecurity, biometrics, etc.) and essential technologies for digital business applications, such as online auctions, online retailers, online consulting, social media content, streaming media, etc. mobile Apps, digital banking, online consulting, software as a service, online traveling booking, online retail infrastructure as a service,
+            </p></label>
+          
+              <select id="tec2" name="tec2" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+            </select>
+  
+  
+            <label for="tec3"><p>
+                Our company’s data security and digital management approach uses only the data transferred to the system by scanning terminals, sensors, RFID, and barcode readers. These data, which are defined as the most secure data, are monitored instantly, and reports submitted to the management are prepared based on this.
+                    </p></label>
+          
+          <select id="tec3" name="tec3" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+  
+          <label for="tec4"><p>
+            Our company uses cyber-security policies and procedures (organization-wide password requirements, e-mail security measures, antivirus software, social media and internet access standards, electronic devices’ password, etc.) to provide effective authentication, authorization, and access auditing data. 
+                    </p></label>
+          
+          <select id="tec4" name="tec4" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+          
+    <button type="button" id="prev-to-3rd-page">Previous</button>
+      
+    <button type="submit" id ="next-to-5th-page">Next</button>
+
+    </div>
+    </div>
+
+    <div id="page-5" style="display: none;">
+        <p>Page 5 of 6</p>
+        <div class="form-group">
+          <label for="cus1"><p>
+            Our company uses digital channels (online source analysis, info e-mail of company website, online workshops, experience sharing platforms) to get customer insights to improve the organization’s strategy actively.
+        </p></label>
+          <select id="cus1" name="cus1" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="very satisfied">Very Satisfied</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="neutral">Neutral</option>
+            <option value="unsatisfied">Unsatisfied</option>
+            <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+  
+          <label for="cus2"><p>
+            Our company considers the digital customer experience through continuous and real-time monitoring of all digital interactions (Digital customer experience refers to the sum total of all the online interactions a customer has with your company. It may start with your company website but could also include mobile apps, chatbots, social media, and any other channels where the touchpoint is virtual.) in rethinking, designing, and implementing business models to gain sustainable competitive advantage.
+            </p></label>
+          
+              <select id="cus2" name="cus2" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+            </select>
+  
+  
+            <label for="cus3"><p>
+                Our company uses digital technologies (online tools like e-mail, social media messaging, blogs, podcasts, SMS, web chats, videos, etc.) in communication with suppliers and stakeholders
+                    </p></label>
+          
+          <select id="cus3" name="cus3" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+  
+          <label for="cus4"><p>
+            Our company uses different digital marketing strategies (E-mail marketing, paid search, social media, search engine optimization (SEO), pay-per-click (PPC) advertising, etc.) to promote our business and products digitally.
+                    </p></label>
+          
+          <select id="cus4" name="cus4" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+          
+    <button type="button" id="prev-to-4th-page">Previous</button>
+      
+    <button type="submit" id ="next-to-6th-page">Next</button>
+
+    </div>
+    </div>
+
+    <div id="page-6" style="display: none;">
+        <p>Page 6 of 6</p>
+        <div class="form-group">
+          <label for="ope1"><p>
+            Our company aligns the business processes (Developing vision and strategy, developing and managing products and services, marketing and selling products and services, delivering services, managing customer service, etc.) based on digital transformation tools (robotic process automation (RPA), business process management (BPM), business process automation (BPA), CRM tools, electronic signature tools, etc.) to create new processes or modify the existing ones to meet the changing market landscapes, customer behavior, and business requirements.
+        </p></label>
+          <select id="ope1" name="ope1" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="very satisfied">Very Satisfied</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="neutral">Neutral</option>
+            <option value="unsatisfied">Unsatisfied</option>
+            <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+  
+          <label for="ope2"><p>
+            Our company uses digital systems (Digital inventory management, digital stock management, enterprise resource planning (ERP), SCADA, warehouse management system (WMS), knowledge management system (KMS), etc.) for production and stock data
+            </p></label>
+          
+              <select id="ope2" name="ope2" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+            </select>
+  
+  
+            <label for="ope3"><p>
+                The obtained data (production amount, actual demand, quality error rates, production efficiency rates, employee productivity rates, and machine utilization rates, etc.) as a result of all operational activities carried out in the company is shared online with the relevant departments, and used to improve operational performance (increasing productivity, reducing inventory, eliminating wastes in operations, finding new customers, increasing customer retention, improving customer service, better managing marketing efforts, tracking social media interaction, predicting sales trends, etc.) in business decisions. 
+                    </p></label>
+          
+          <select id="ope3" name="ope3" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+  
+          <label for="ope4"><p>
+            Our company has a production infrastructure with machines that can communicate online, digital quality control systems, automatic transport and storage systems, smart air conditioning and ventilation systems, and image processing systems for business growth and development that are relevant to our products or our services.
+                    </p></label>
+          
+          <select id="ope4" name="ope4" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="very satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="unsatisfied">Unsatisfied</option>
+              <option value="very unsatisfied">Very Unsatisfied</option>
+          </select>
+          
+    <button type="button" id="prev-to-5th-page">Previous</button>
+      
+    <button type="submit">Submit</button>
+
+    </div>
+    </div>
+
+
+
+  </form>
+  
